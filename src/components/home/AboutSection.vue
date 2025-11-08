@@ -43,7 +43,7 @@
         <div class="flex justify-center">
           <div class="relative w-full max-w-sm md:max-w-md">
             <img 
-              src="https://img.icons8.com/3d-fluency/400/recycle-sign.png" 
+              :src= "mainPic"
               alt="EcoHack 3D Graphic" 
               class="w-full h-auto drop-shadow-2xl"
             />
@@ -63,7 +63,15 @@
 </template>
 
 <script>
+import mainPic from '../../assets/images/ecohack.PNG'
+
 export default {
-  name: 'AboutSection'
+  name: 'AboutSection',
+  data() {
+    return {
+      mainPic,
+      
+    }
+  }
 }
 </script>

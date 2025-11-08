@@ -33,7 +33,7 @@
           
           <div class="rounded-2xl overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=400&h=250&fit=crop" 
+              :src= "SustainableAgriculture" 
               alt="Sustainable Agriculture" 
               class="w-full h-40 md:h-48 object-cover"
             />
@@ -56,7 +56,7 @@
           
           <div class="rounded-2xl overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=400&h=250&fit=crop" 
+              :src="SmartWasteManagement"
               alt="Smart Waste Management" 
               class="w-full h-40 md:h-48 object-cover"
             />
@@ -79,7 +79,7 @@
           
           <div class="rounded-2xl overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=250&fit=crop" 
+              :src="SmartEnergyManagement"
               alt="Smart Energy Management" 
               class="w-full h-40 md:h-48 object-cover"
             />
@@ -91,7 +91,19 @@
 </template>
 
 <script>
+import SustainableAgriculture from '../../assets/images/sustainableAgriculture.png'
+import SmartWasteManagement from '../../assets/images/smartWasteManagement.png'
+import SmartEnergyManagement from '../../assets/images/smartEnergyManagement.png'
+
 export default {
-  name: 'ChallengesSection'
+  name: 'ChallengesSection',
+  data() {
+    return {
+      SustainableAgriculture,
+      SmartWasteManagement,
+      SmartEnergyManagement
+    }
+  }
+
 }
 </script>

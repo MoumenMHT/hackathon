@@ -42,7 +42,7 @@
         <!-- Contact Column -->
         <div>
           <h3 class="text-[#39B54A] text-lg md:text-xl font-bold mb-4">Contact</h3>
-          <ul class="space-y-3 text-sm md:text-base">
+          <ul class="space-y-3 text-sm md:text-base ml-32">
             <li class="flex items-start gap-2 text-gray-700">
               <i class="fas fa-map-marker-alt text-[#39B54A] mt-1"></i>
               <span>ISSI Exia CESI Algeria</span>
@@ -65,7 +65,7 @@
         <!-- School Info Column -->
         <div>
           <h3 class="text-[#39B54A] text-lg md:text-xl font-bold mb-4">School: CESI Algerie</h3>
-          <div class="flex gap-3 md:gap-4 mt-6 flex-wrap">
+          <div class="flex gap-3 md:gap-4 mt-60 ml-32 flex-wrap">
             <a href="#" class="text-gray-700 hover:text-[#39B54A] transition text-xl md:text-2xl" aria-label="TikTok">
               <i class="fab fa-tiktok"></i>
             </a>
