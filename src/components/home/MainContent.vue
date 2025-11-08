@@ -71,7 +71,7 @@
 </template>
 
 <script>
-import mainPic from '../../assets/main_pic.PNG'
+import mainPic from '../../assets/main_pic.png'
 import echohackLogo from '../../assets/images/ecohackLogo.png'
 import cesi2026Logo from '../../assets/images/CESi2026.png'
 

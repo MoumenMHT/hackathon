@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import mainPic from '../../assets/images/ecohack.PNG'
+import mainPic from '../../assets/images/ecohack.png'
 
 export default {
   name: 'AboutSection',
