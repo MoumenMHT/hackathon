@@ -71,9 +71,9 @@
 </template>
 
 <script>
-import mainPic from '../../../assets/main_pic.PNG'
-import echohackLogo from '../../../assets/images/ecohackLogo.png'
-import cesi2026Logo from '../../../assets/images/CESi2026.png'
+import mainPic from '../../assets/main_pic.PNG'
+import echohackLogo from '../../assets/images/ecohackLogo.png'
+import cesi2026Logo from '../../assets/images/CESi2026.png'
 
 export default {
   name: 'MainContent',
