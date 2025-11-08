@@ -7,7 +7,7 @@
           <img 
             :src="mainPic" 
             alt="Main Picture" 
-            class="w-full h-full object-cover object-center" 
+            class=" object-cover object-center" 
           />
         </div>
       </div>
