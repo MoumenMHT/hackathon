@@ -1,7 +1,12 @@
 <!-- components/CountdownBox.vue -->
 <template>
-  <div class="bg-white rounded-3xl shadow-md w-[213px] h-[213px]  flex flex-col items-center justify-center">
-    <span class="text-3xl md:text-5xl font-bold text-green-600">
+<div class="bg-white rounded-3xl shadow-md 
+              w-[120px] h-[120px] 
+              sm:w-[160px] sm:h-[160px] 
+              md:w-[190px] md:h-[190px] 
+              lg:w-[213px] lg:h-[213px] 
+              flex flex-col items-center justify-center">
+                  <span class="text-3xl md:text-5xl font-bold text-green-600">
       {{ String(value).padStart(2, '0') }}
     </span>
     <span class="text-xs md:text-sm text-gray-600 mt-1 font-medium">{{ label }}</span>

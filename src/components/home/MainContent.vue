@@ -1,88 +1,91 @@
 <template>
-  <main class="relative w-full min-h-screen bg-gray-50">
-    <div class="w-full">
-      <!-- Hero Image Section -->
-      <div class="relative w-full">
-        <div class="aspect-[16/9] sm:aspect-[16/8] md:aspect-[16/7] lg:aspect-[16/6] w-full">
-          <img 
-            :src="mainPic" 
-            alt="Main Picture" 
-            class=" object-cover object-center" 
-          />
-        </div>
+  <main class="relative w-full min-h-screen bg-gray-50 overflow-hidden">
+    <!-- Hero Image -->
+    <div class="relative w-full">
+      <div class="w-full aspect-[16/9] sm:aspect-[16/8] md:aspect-[21/9] lg:aspect-[16/6] xl:aspect-[21/8]">
+        <img
+          :src="mainPic"
+          alt="Hackathon hero background"
+          class="w-full h-full object-cover object-center"
+        />
       </div>
+    </div>
 
-      <div class="h-4 sm:h-6"></div>
+    <div class="h-10 sm:h-24"></div>
 
-      <!-- Content Section -->
-      <div class="relative px-4 sm:px-6 md:px-8 lg:px-12">
-        <div class="flex flex-col items-center sm:items-start space-y-4 md:space-y-6">
-          <img 
-            :src="echohackLogo" 
-            alt="EchoHack Logo" 
-            class="w-[280px] sm:w-[400px] md:w-[600px] lg:w-[888px] h-auto"
+    <!-- Content -->
+    <div class="relative px-4 sm:px-6 lg:px-12 -mt-8 ">
+      <div class="max-w-7xl ml-2 mx-auto">
+
+        <!-- MAIN CONTENT: CENTER on mobile, RIGHT on desktop -->
+        <div class="flex flex-col  
+                    items-center sm:items-start
+                    pl- sm:pl-8 md:pl-16 lg:pl-20 xl:pl-24
+                    gap-6 md:gap-8 lg:gap-10
+                    text-center sm:text-left
+                    ">
+
+          <!-- EchoHack Logo -->
+          <img
+            :src="echohackLogo"
+            alt="EchoHack Logo"
+            class="w-64 sm:w-[26rem] md:w-[28rem] lg:w-[42rem] xl:w-[55rem] h-auto drop-shadow-2xl"
           />
 
-          <img 
-            :src="cesi2026Logo" 
-            alt="CESI 2026 Logo" 
-            class="w-[200px] sm:w-[300px] md:w-[400px] lg:w-[489px] h-auto"
+          <!-- CESI 2026 Logo -->
+          <img
+            :src="cesi2026Logo"
+            alt="CESI 2026 Logo"
+            class="w-48 sm:w-64 md:w-80 lg:w-96 xl:w-[30rem] h-auto drop-shadow-xl"
           />
-          
-          <p class="text-base sm:text-lg md:text-xl lg:text-2xl max-w-2xl text-center sm:text-left ml-0 sm:ml-4 md:ml-8">
+
+          <!-- Text -->
+          <p class="text-center 
+                    text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 
+                    font-medium text-gray-800 max-w-3xl leading-relaxed">
             Join hundreds of innovators building sustainable solutions.
           </p>
 
-          <!-- Mobile Register Button -->
-          <div class="sm:hidden mt-8 flex justify-center w-full">
-            <div class="bg-[#39B54A] text-white rounded-full font-medium font-semibold 
-              flex items-center justify-center 
-              hover:bg-[#2d8c3a] transition-colors duration-300
-              w-[280px] h-[60px]">
-              <div class="flex items-center gap-2">
-                <i class="fas fa-rocket text-sm" aria-hidden="true"></i>
-                <p class="text-sm font-medium text-white">REGISTER NOW !</p>
-              </div>
-            </div>
-          </div>
-        </div>
-          
-        <!-- Desktop Register Button -->
-        <div class="hidden sm:flex bg-[#39B54A] text-white absolute 
-          sm:top-8 sm:right-8 
-          md:top-16 md:right-16 
-          lg:top-20 lg:right-20 
-          rounded-full font-medium font-semibold 
-          items-center justify-center 
-          hover:bg-[#2d8c3a] transition-colors duration-300
-          sm:w-[250px] sm:h-[70px]
-          md:w-[300px] md:h-[80px]
-          lg:w-[343.67px] lg:h-[94px]">
-          <div class="flex items-center gap-2 sm:gap-3">
-            <i class="fas fa-rocket text-sm sm:text-base md:text-lg" aria-hidden="true"></i>
-            <p class="text-sm sm:text-base md:text-lg font-medium text-white">REGISTER NOW !</p>
+          <!-- Mobile Button — centered on mobile -->
+          <div class="sm:hidden mt-12">
+            <button class="group flex items-center gap-3 bg-[#39B54A] hover:bg-[#2d8c3a] 
+                           text-white font-bold rounded-full px-12 py-6 shadow-2xl 
+                           transition-all duration-300 hover:scale-105">
+              <i class="fas fa-rocket text-2xl"></i>
+              <span class="text-xl tracking-wider">REGISTER NOW !</span>
+            </button>
           </div>
         </div>
 
+        <!-- Desktop Floating Button — safe position, no overlap -->
+        <div class="hidden sm:block absolute 
+            top-20 sm:top-20 md:top-24 lg:top-26 xl:top-44 
+            right-4 sm:right-6 md:right-10 lg:right-16 xl:right-20 
+            z-30 
+            transition-all duration-700 ease-out
+            scale-100          <!-- default size -->
+            sm:scale-95        <!-- on tablet: shrink to 95% -->
+            md:scale-90        <!-- on small laptop: shrink to 90% -->
+            lg:scale-100       <!-- on big laptop: back to 100% -->
+            xl:scale-105">     <!-- on huge screen: even bigger! -->
+          <button class="group flex items-center gap-4 bg-[#39B54A] hover:bg-[#2d8c3a] 
+                         text-white font-bold rounded-full shadow-2xl 
+                         transition-all duration-300 hover:scale-110 
+                         px-8 py-5 sm:px-10 sm:py-6 md:px-12 md:py-7 lg:px-14 lg:py-8">
+            <i class="fas fa-rocket text-xl sm:text-2xl md:text-3xl lg:text-4xl"></i>
+            <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-bold tracking-wider">
+              REGISTER NOW !
+            </span>
+          </button>
+        </div>
+
       </div>
-      
     </div>
   </main>
 </template>
 
-<script>
+<script setup>
 import mainPic from '../../assets/main_pic.png'
 import echohackLogo from '../../assets/images/ecohackLogo.png'
 import cesi2026Logo from '../../assets/images/CESi2026.png'
-
-export default {
-  name: 'MainContent',
-  data() {
-    return {
-      mainPic,
-      echohackLogo,
-      cesi2026Logo
-    }
-  }
-}
 </script>
