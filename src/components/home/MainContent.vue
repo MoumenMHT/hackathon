@@ -1,5 +1,5 @@
 <template>
-  <main class="relative w-full min-h-screen bg-gray-50 overflow-hidden">
+  <main class="relative w-full  bg-gray-50 overflow-hidden ">
     <!-- Hero Image -->
     <div class="relative w-full">
       <div class="w-full aspect-[16/9] sm:aspect-[16/8] md:aspect-[21/9] lg:aspect-[16/6] xl:aspect-[21/8]">
@@ -14,7 +14,7 @@
     <div class="h-10 sm:h-24"></div>
 
     <!-- Content -->
-    <div class="relative px-4 sm:px-6 lg:px-12 -mt-8 ">
+    <div class="relative  ">
       <div class="max-w-7xl ml-2 mx-auto">
 
         <!-- MAIN CONTENT: CENTER on mobile, RIGHT on desktop -->
@@ -80,7 +80,8 @@
         </div>
 
       </div>
-    </div>
+    </div>    <div class="h-10 sm:h-24"></div>
+
   </main>
 </template>
 

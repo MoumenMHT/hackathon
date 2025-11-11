@@ -1,6 +1,6 @@
 <!-- CountdownTimer.vue -->
 <template>
-  <div style="background-color: #39B54A;" class="py-12 px-6 font-sans">
+  <div style="background-color: #39B54A;" class="py-12 px-6 font-sans ">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">Starting in</h2>
 

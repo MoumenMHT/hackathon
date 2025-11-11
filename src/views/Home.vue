@@ -6,7 +6,6 @@
     <!-- Main Content -->
     <MainContent />
     
-    <div class="h-20"></div>
 
     <!-- Timer/Countdown Section -->
     <Timer />
