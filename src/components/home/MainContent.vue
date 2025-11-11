@@ -1,6 +1,7 @@
 <template>
   <main class="relative w-full  bg-gray-50 overflow-hidden ">
     <!-- Hero Image -->
+   <!--
     <div class="relative w-full">
       <div class="w-full aspect-[16/9] sm:aspect-[16/8] md:aspect-[21/9] lg:aspect-[16/6] xl:aspect-[21/8]">
         <img
@@ -10,6 +11,7 @@
         />
       </div>
     </div>
+    -->
 
     <div class="h-10 sm:h-24"></div>
 
