@@ -1,5 +1,15 @@
 <template>
   <main class="relative w-full min-h-screen bg-white overflow-hidden">
+    <!-- Background Image with Blur -->
+    <div class="absolute inset-0">
+      <img 
+        src="/bg.jpg" 
+        alt="Background" 
+        class="w-full h-full object-cover opacity-30 blur-sm"
+      />
+      <div class="absolute inset-0 bg-white/60"></div>
+    </div>
+
     <!-- Animated Background Elements -->
     <div class="absolute inset-0 overflow-hidden">
       <!-- Gradient Orbs -->
@@ -30,13 +40,13 @@
         <div class="flex flex-col items-center text-center space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12">
           
           <!-- Badge -->
-          <div class="animate-fade-in-down">
-            <div class="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-sm border border-green-500/20 rounded-full">
+          <div class="animate-fade-in-down mt-8 sm:mt-12 md:mt-16">
+            <div class="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 backdrop-blur-sm border border-blue-500/20 rounded-full">
               <span class="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-green-500"></span>
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-blue-500"></span>
               </span>
-              <span class="text-xs sm:text-sm md:text-base font-semibold text-green-400 tracking-wide">REGISTRATION OPEN</span>
+              <span class="text-xs sm:text-sm md:text-base font-semibold text-blue-600 tracking-wide">REGISTRATION COMING SOON</span>
             </div>
           </div>
 
