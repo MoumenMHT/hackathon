@@ -4,27 +4,30 @@
     <Navbar />
     
     <!-- Main Content / Hero Section -->
-    <MainContent />
+    <MainContent @open-registration="openRegistration" />
     
     <!-- Timer/Countdown Section -->
-    <Timer />
+    <Timer @open-registration="openRegistration" />
     
     <div class="h-20"></div>
 
     <!-- About Section -->
-    <AboutSection />
+    <AboutSection @open-registration="openRegistration" />
     
     <!-- Challenges Section -->
-    <ChallengesSection />
+    <ChallengesSection @open-registration="openRegistration" />
     
     <!-- Location Section -->
     <LocationSection />
     
     <!-- CTA Section -->
-    <CTASection />
+    <CTASection @open-registration="openRegistration" />
     
     <!-- Footer -->
     <Footer />
+
+    <!-- Registration Modal -->
+    <RegistrationModal :isOpen="showRegistration" @close="closeRegistration" />
   </div>
 </template>
 
@@ -37,6 +40,7 @@ import ChallengesSection from '../components/home/ChallengesSection.vue'
 import LocationSection from '../components/home/LocationSection.vue'
 import CTASection from '../components/home/CTASection.vue'
 import Footer from '../components/home/Footer.vue'
+import RegistrationModal from '../components/home/RegistrationModal.vue'
 
 export default {
   name: 'Home',
@@ -48,7 +52,21 @@ export default {
     ChallengesSection,
     LocationSection,
     CTASection,
-    Footer
+    Footer,
+    RegistrationModal
+  },
+  data() {
+    return {
+      showRegistration: false
+    }
+  },
+  methods: {
+    openRegistration() {
+      this.showRegistration = true
+    },
+    closeRegistration() {
+      this.showRegistration = false
+    }
   }
 }
 </script>

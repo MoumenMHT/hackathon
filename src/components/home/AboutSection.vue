@@ -53,7 +53,7 @@
 
       <!-- Register Button -->
       <div class="flex justify-center mt-12">
-        <button class="bg-[#39B54A] inline-flex items-center gap-2 text-white font-semibold py-3 px-6 md:px-8 rounded-xl shadow-lg hover:bg-[#2d8c3a] transition transform hover:scale-105 text-sm md:text-base">
+        <button @click="handleRegister" class="bg-[#39B54A] inline-flex items-center gap-2 text-white font-semibold py-3 px-6 md:px-8 rounded-xl shadow-lg hover:bg-[#2d8c3a] transition transform hover:scale-105 text-sm md:text-base">
           <i class="fas fa-rocket text-base md:text-lg" aria-hidden="true"></i>
           REGISTER NOW
         </button>
@@ -67,10 +67,16 @@ import mainPic from '../../assets/images/ecohack.png'
 
 export default {
   name: 'AboutSection',
+  emits: ['open-registration'],
   data() {
     return {
       mainPic,
       
+    }
+  },
+  methods: {
+    handleRegister() {
+      this.$emit('open-registration')
     }
   }
 }

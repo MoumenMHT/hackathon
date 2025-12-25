@@ -14,7 +14,7 @@
         Be part of the sustainable innovation movement.
       </p>
 
-      <button class="bg-[#39B54A] inline-flex items-center gap-2 text-white font-semibold py-3 md:py-4 px-8 md:px-10 rounded-xl shadow-lg hover:bg-[#2d8c3a] transition transform hover:scale-105 text-base md:text-lg">
+      <button @click="handleRegister" class="bg-[#39B54A] inline-flex items-center gap-2 text-white font-semibold py-3 md:py-4 px-8 md:px-10 rounded-xl shadow-lg hover:bg-[#2d8c3a] transition transform hover:scale-105 text-base md:text-lg">
         <i class="fas fa-rocket text-lg md:text-xl"></i>
         REGISTER NOW
       </button>
@@ -24,6 +24,12 @@
 
 <script>
 export default {
-  name: 'CTASection'
+  name: 'CTASection',
+  emits: ['open-registration'],
+  methods: {
+    handleRegister() {
+      this.$emit('open-registration')
+    }
+  }
 }
 </script>

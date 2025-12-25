@@ -12,7 +12,7 @@
       </div>
 
       <div class="absolute inset-x-0 mt-6 flex justify-center">
-        <button class="border-4 border-[#39B54A] inline-flex items-center gap-2 bg-white text-green-600 font-semibold py-3 px-8 rounded-xl shadow-lg hover:bg-gray-100 transition transform hover:scale-105">
+        <button @click="handleRegister" class="border-4 border-[#39B54A] inline-flex items-center gap-2 bg-white text-green-600 font-semibold py-3 px-8 rounded-xl shadow-lg hover:bg-gray-100 transition transform hover:scale-105">
           <i class="fas fa-rocket text-sm sm:text-base md:text-lg" aria-hidden="true"></i>
           REGISTER NOW !
         </button>
@@ -25,6 +25,8 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import CountdownBox from './CountdownBox.vue'
 
+const emit = defineEmits(['open-registration'])
+
 const days = ref(0)
 const hours = ref(0)
 const minutes = ref(0)
@@ -32,7 +34,11 @@ const seconds = ref(0)
 
 let interval = null
 
-const targetDate = new Date('2026-01-01T00:00:00')
+const targetDate = new Date('2026-01-28T00:00:00')
+
+const handleRegister = () => {
+  emit('open-registration')
+}
 
 const updateTime = () => {
   const now = new Date().getTime()

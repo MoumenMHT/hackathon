@@ -44,9 +44,9 @@
             <div class="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 backdrop-blur-sm border border-blue-500/20 rounded-full">
               <span class="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-blue-500"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-green-500"></span>
               </span>
-              <span class="text-xs sm:text-sm md:text-base font-semibold text-blue-600 tracking-wide">REGISTRATION COMING SOON</span>
+              <span class="text-xs sm:text-sm md:text-base font-semibold text-green-600 tracking-wide">REGISTRATION ARE OPEN</span>
             </div>
           </div>
 
@@ -148,9 +148,10 @@ import { ref } from 'vue'
 import echohackLogo from '../../assets/images/ecohackLogo.png'
 import cesi2026Logo from '../../assets/images/CESi2026.png'
 
+const emit = defineEmits(['open-registration'])
+
 const handleRegister = () => {
-  // Add your registration logic here
-  console.log('Registration clicked')
+  emit('open-registration')
 }
 
 const handleLearnMore = () => {

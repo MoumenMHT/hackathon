@@ -134,6 +134,7 @@ import ChallengeModal from './ChallengeModal.vue'
 
 export default {
   name: 'ChallengesSection',
+  emits: ['open-registration'],
   components: {
     ChallengeModal
   },
@@ -224,11 +225,9 @@ Your innovations could include smart home energy management systems, predictive 
     },
     handleRegister(challenge) {
       console.log('Registering for challenge:', challenge.title)
-      // You can add registration logic here
-      // For now, we'll just close the modal
+      // Emit event to parent to open registration modal
+      this.$emit('open-registration')
       this.closeModal()
-      // Optionally scroll to registration section or open registration form
-      alert(`Registration for ${challenge.title} - Coming soon!`)
     }
   }
 }
