@@ -4,7 +4,7 @@ services:
     github:
       branch: main
       deploy_on_push: true
-    build_command: npm install --include=optional && npm run build
+    build_command: rm -f package-lock.json && npm install && npm run build
     run_command: npm start
     environment_slug: node-js
     http_port: 8080
