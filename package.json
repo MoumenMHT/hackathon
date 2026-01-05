@@ -13,10 +13,7 @@
     "start": "serve -s dist -l 8080"
   },
   "devDependencies": {
-    "vite": "npm:rolldown-vite@7.1.14"
-  },
-  "overrides": {
-    "vite": "npm:rolldown-vite@7.1.14"
+    "vite": "^5.4.11"
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
