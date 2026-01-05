@@ -46,13 +46,13 @@
               Home
             </a>
             <a href="#" class="text-gray-700 font-medium hover:text-[#76c248] transition-colors text-sm lg:text-base whitespace-nowrap">
-              A propos
+              About
             </a>
             <a href="#" class="text-gray-700 font-medium hover:text-[#76c248] transition-colors text-sm lg:text-base whitespace-nowrap">
-              Programme
+              Program
             </a>
             <a href="#" class="text-gray-700 font-medium hover:text-[#76c248] transition-colors text-sm lg:text-base whitespace-nowrap">
-              Partenaires
+              Partners
             </a>
             <a href="#" class="text-gray-700 font-medium hover:text-[#76c248] transition-colors text-sm lg:text-base whitespace-nowrap">
               Inscription

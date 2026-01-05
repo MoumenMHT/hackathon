@@ -155,7 +155,7 @@
               <option value="">Select a challenge</option>
               <option value="Sustainable Agriculture & Agroecology">Sustainable Agriculture & Agroecology</option>
               <option value="Smart Waste Management">Smart Waste Management</option>
-              <option value="Smart Energy Management">Smart Energy Management</option>
+              <option value="Smart Energy Management for Electric Mobility">Smart Energy Management for Electric Mobility</option>
             </select>
           </div>
 

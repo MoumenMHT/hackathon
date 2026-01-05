@@ -89,11 +89,11 @@
           </div>
           
           <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-4">
-            Smart Energy Management
+            Smart Energy Management for Electric Mobility
           </h3>
           
           <p class="text-gray-600 text-sm md:text-base mb-4 flex-grow">
-            Create tomorrow's energy networks with smart grid solutions, intelligent storage, and consumption optimization.
+            Power the future of electric vehicles with intelligent charging infrastructure, smart grid solutions, and optimized energy distribution for sustainable mobility.
           </p>
           
           <div class="relative rounded-2xl overflow-hidden h-40 md:h-48 mb-4">
@@ -192,21 +192,21 @@ Your solutions could involve smart bins with fill-level sensors, AI-powered wast
           id: 3,
           title: 'Smart Energy Management',
           icon: 'fas fa-bolt',
-          description: 'Create tomorrow\'s energy networks with smart grid solutions, intelligent storage, and consumption optimization.',
-          detailedDescription: `The transition to sustainable energy requires more than just renewable energy generation—it demands intelligent systems that can efficiently manage, store, and distribute energy. As renewable sources like solar and wind become more prevalent, we need smart solutions to handle their intermittent nature.
+          description: 'Power the future of electric vehicles with intelligent charging infrastructure, smart grid solutions, and optimized energy distribution for sustainable mobility.',
+          detailedDescription: `Electric mobility is experiencing rapid expansion worldwide, driven by technological innovations in batteries, charging infrastructure, and renewable energy integration. However, the transition to clean transportation faces significant challenges: managing grid capacity, integrating renewable sources, and building adequate infrastructure.
 
-This challenge focuses on creating innovative energy management systems that optimize consumption, integrate renewable sources, improve grid stability, and reduce carbon footprint. We're looking for solutions that leverage AI, IoT, and blockchain to create more resilient and efficient energy networks.
+We're looking for solutions that enable intelligent energy management for electric vehicles, from smart charging systems that prevent grid overload to platforms that integrate solar and renewable energy into charging stations. Your innovations could range from AI algorithms for energy planning and optimization to mobile apps that help users find and manage charging.
 
-Your innovations could include smart home energy management systems, predictive maintenance for power infrastructure, peer-to-peer energy trading platforms, or AI algorithms for demand forecasting and load balancing.`,
+The goal is to create a more efficient, sustainable, and accessible electric mobility ecosystem that accelerates the adoption of clean transportation while ensuring grid stability and maximizing the use of renewable energy sources.`,
           objectives: [
-            'Develop smart home energy management systems',
-            'Create AI-powered demand forecasting models',
-            'Build peer-to-peer energy trading platforms',
-            'Design battery storage optimization solutions',
-            'Implement predictive maintenance for energy infrastructure',
-            'Develop real-time monitoring and analytics dashboards'
+            'Design smart EV charging systems that prevent grid overload',
+            'Integrate renewable energy sources into charging infrastructure',
+            'Build AI models for energy demand forecasting and optimization',
+            'Create platforms for charging station management and monitoring',
+            'Develop solutions for battery storage and vehicle-to-grid technology',
+            'Design cost-effective infrastructure models for emerging markets'
           ],
-          tags: ['Smart Grid', 'Renewable Energy', 'AI Forecasting', 'Blockchain', 'Energy Storage', 'IoT', 'Analytics'],
+          tags: ['EV Charging', 'Smart Grid', 'Renewable Energy', 'AI/ML', 'IoT', 'Battery Storage', 'V2G', 'Mobile Apps'],
           image: SmartEnergyManagement
         }
       ]
