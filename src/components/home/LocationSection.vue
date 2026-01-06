@@ -14,15 +14,16 @@
       <!-- Map Container -->
       <div class="border-4 border-[#39B54A] rounded-3xl overflow-hidden mb-8">
         <div class="relative w-full h-64 md:h-96">
-          <!-- Embedded Map -->
+          <!-- Embedded Map - No API Key Required -->
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.9385048148747!2d3.0917155762921804!3d36.67597957469132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fadc7298f5051%3A0xdbd70cb6aaeee905!2sExia.cesi.alg%C3%A9rie!5e0!3m2!1sfr!2sdz!4v1762817916123!5m2!1sfr!2sdz"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.9385048148747!2d3.0917155762921804!3d36.67597957469132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fadc7298f5051%3A0xdbd70cb6aaeee905!2sExia.cesi.alg%C3%A9rie!5e0!3m2!1sfr!2sdz!4v1736179200000!5m2!1sfr!2sdz"
             width="100%" 
             height="100%" 
             style="border:0;" 
             allowfullscreen="" 
             loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
+            referrerpolicy="no-referrer-when-downgrade"
+            title="ISSI.Exia.Cési.Algérie Location">
           </iframe>
         </div>
         
