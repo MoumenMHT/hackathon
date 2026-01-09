@@ -8,11 +8,11 @@
 
       <!-- Title -->
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-4">
-        Three Challenges, Thousand Possibilities
+        Two Challenges, Thousand Possibilities
       </h2>
       
       <p class="text-center text-gray-600 text-base md:text-lg mb-12 max-w-3xl mx-auto px-4">
-        Explore our three main themes and discover how your creativity can contribute to a more sustainable future.
+        Explore our two main themes and discover how your creativity can contribute to a more sustainable future.
       </p>
 
       <!-- Challenges Grid -->

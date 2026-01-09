@@ -27,7 +27,7 @@
             
             <div class="bg-[#39B54A] rounded-xl md:rounded-2xl p-4 md:p-6 text-center text-white shadow-lg">
               <i class="fas fa-project-diagram text-2xl md:text-3xl mb-2"></i>
-              <div class="text-2xl md:text-3xl font-bold">3</div>
+              <div class="text-2xl md:text-3xl font-bold">2</div>
               <div class="text-xs md:text-sm font-medium mt-1">Projects</div>
             </div>
             

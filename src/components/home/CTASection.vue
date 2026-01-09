@@ -7,7 +7,7 @@
       </div>
 
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-        Join the EcoHackRevolution
+        Join the EcoHack Revolution
       </h2>
       
       <p class="text-gray-600 text-base md:text-lg mb-8 px-4">
