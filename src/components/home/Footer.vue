@@ -66,21 +66,16 @@
         <div>
           <h3 class="text-[#39B54A] text-lg md:text-xl font-bold mb-4">School: CESI Algerie</h3>
           <div class="flex gap-3 md:gap-4 mt-4 flex-wrap">
-            <a href="#" class="text-gray-700 hover:text-[#39B54A] transition text-xl md:text-2xl" aria-label="TikTok">
+            <a href="https://www.tiktok.com/@cesi.event" class="text-gray-700 hover:text-[#39B54A] transition text-xl md:text-2xl" aria-label="TikTok">
               <i class="fab fa-tiktok"></i>
             </a>
-            <a href="#" class="text-gray-700 hover:text-[#39B54A] transition text-xl md:text-2xl" aria-label="Instagram">
+            <a href="https://www.instagram.com/cesi.event/" class="text-gray-700 hover:text-[#39B54A] transition text-xl md:text-2xl" aria-label="Instagram">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="#" class="text-gray-700 hover:text-[#39B54A] transition text-xl md:text-2xl" aria-label="Facebook">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#" class="text-gray-700 hover:text-[#39B54A] transition text-xl md:text-2xl" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/cesi-events/" class="text-gray-700 hover:text-[#39B54A] transition text-xl md:text-2xl" aria-label="LinkedIn">
               <i class="fab fa-linkedin"></i>
             </a>
-            <a href="#" class="text-gray-700 hover:text-[#39B54A] transition text-xl md:text-2xl" aria-label="X (Twitter)">
-              <i class="fab fa-x-twitter"></i>
-            </a>
+
           </div>
         </div>
       </div>

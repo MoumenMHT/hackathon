@@ -42,20 +42,45 @@
 
           <!-- Desktop Navigation - starts at md (768px) -->
           <div class="hidden md:flex items-center space-x-4 lg:space-x-8">
-            <a href="#" class="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 lg:px-6 py-2 rounded-full font-medium hover:from-green-600 hover:to-emerald-700 transition-all duration-300 text-sm lg:text-base whitespace-nowrap shadow-lg hover:shadow-xl hover:scale-105">
+            <a @click.prevent="scrollToSection('home')" href="#home" :class="[
+              'px-4 lg:px-6 py-2 rounded-full font-medium transition-all duration-300 text-sm lg:text-base whitespace-nowrap cursor-pointer',
+              activeSection === 'home' 
+                ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg hover:shadow-xl hover:scale-105 hover:from-green-600 hover:to-emerald-700' 
+                : 'text-gray-700 hover:text-[#76c248]'
+            ]">
               Home
             </a>
-            <a href="#" class="text-gray-700 font-medium hover:text-[#76c248] transition-colors text-sm lg:text-base whitespace-nowrap">
+            <a @click.prevent="scrollToSection('whene')" href="#whene" :class="[
+              'px-4 lg:px-6 py-2 rounded-full font-medium transition-all duration-300 text-sm lg:text-base whitespace-nowrap cursor-pointer',
+              activeSection === 'whene' 
+                ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg hover:shadow-xl hover:scale-105 hover:from-green-600 hover:to-emerald-700' 
+                : 'text-gray-700 hover:text-[#76c248]'
+            ]">
+              When
+            </a>
+            <a @click.prevent="scrollToSection('about')" href="#about" :class="[
+              'px-4 lg:px-6 py-2 rounded-full font-medium transition-all duration-300 text-sm lg:text-base whitespace-nowrap cursor-pointer',
+              activeSection === 'about' 
+                ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg hover:shadow-xl hover:scale-105 hover:from-green-600 hover:to-emerald-700' 
+                : 'text-gray-700 hover:text-[#76c248]'
+            ]">
               About
             </a>
-            <a href="#" class="text-gray-700 font-medium hover:text-[#76c248] transition-colors text-sm lg:text-base whitespace-nowrap">
-              Program
+            <a @click.prevent="scrollToSection('challenges')" href="#challenges" :class="[
+              'px-4 lg:px-6 py-2 rounded-full font-medium transition-all duration-300 text-sm lg:text-base whitespace-nowrap cursor-pointer',
+              activeSection === 'challenges' 
+                ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg hover:shadow-xl hover:scale-105 hover:from-green-600 hover:to-emerald-700' 
+                : 'text-gray-700 hover:text-[#76c248]'
+            ]">
+              Challenges
             </a>
-            <a href="#" class="text-gray-700 font-medium hover:text-[#76c248] transition-colors text-sm lg:text-base whitespace-nowrap">
-              Partners
-            </a>
-            <a href="#" class="text-gray-700 font-medium hover:text-[#76c248] transition-colors text-sm lg:text-base whitespace-nowrap">
-              Inscription
+            <a @click.prevent="scrollToSection('location')" href="#location" :class="[
+              'px-4 lg:px-6 py-2 rounded-full font-medium transition-all duration-300 text-sm lg:text-base whitespace-nowrap cursor-pointer',
+              activeSection === 'location' 
+                ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg hover:shadow-xl hover:scale-105 hover:from-green-600 hover:to-emerald-700' 
+                : 'text-gray-700 hover:text-[#76c248]'
+            ]">
+              Location
             </a>
           </div>
 
@@ -72,11 +97,36 @@
         >
           <div v-if="isOpen" class="md:hidden">
             <div class="px-2 pt-3 pb-4 space-y-1 bg-white/95 backdrop-blur-md border-t border-gray-100 rounded-b-lg">
-              <a href="#" class="block px-4 py-3 rounded-md text-base font-medium text-white bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700">Home</a>
-              <a href="#" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-[#76c248] hover:bg-gray-50">A propos</a>
-              <a href="#" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-[#76c248] hover:bg-gray-50">Programme</a>
-              <a href="#" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-[#76c248] hover:bg-gray-50">Partenaires</a>
-              <a href="#" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-[#76c248] hover:bg-gray-50">Inscription</a>
+              <a @click.prevent="scrollToSection('home')" href="#home" :class="[
+                'block px-4 py-3 rounded-md text-base font-medium cursor-pointer transition-all duration-300',
+                activeSection === 'home'
+                  ? 'text-white bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700'
+                  : 'text-gray-700 hover:text-[#76c248] hover:bg-gray-50'
+              ]">Home</a>
+              <a @click.prevent="scrollToSection('whene')" href="#whene" :class="[
+                'block px-4 py-3 rounded-md text-base font-medium cursor-pointer transition-all duration-300',
+                activeSection === 'whene'
+                  ? 'text-white bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700'
+                  : 'text-gray-700 hover:text-[#76c248] hover:bg-gray-50'
+              ]">When ?</a>
+              <a @click.prevent="scrollToSection('about')" href="#about" :class="[
+                'block px-4 py-3 rounded-md text-base font-medium cursor-pointer transition-all duration-300',
+                activeSection === 'about'
+                  ? 'text-white bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700'
+                  : 'text-gray-700 hover:text-[#76c248] hover:bg-gray-50'
+              ]">About</a>
+              <a @click.prevent="scrollToSection('challenges')" href="#challenges" :class="[
+                'block px-4 py-3 rounded-md text-base font-medium cursor-pointer transition-all duration-300',
+                activeSection === 'challenges'
+                  ? 'text-white bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700'
+                  : 'text-gray-700 hover:text-[#76c248] hover:bg-gray-50'
+              ]">Challenges</a>
+              <a @click.prevent="scrollToSection('location')" href="#location" :class="[
+                'block px-4 py-3 rounded-md text-base font-medium cursor-pointer transition-all duration-300',
+                activeSection === 'location'
+                  ? 'text-white bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700'
+                  : 'text-gray-700 hover:text-[#76c248] hover:bg-gray-50'
+              ]">Location</a>
             </div>
           </div>
         </transition>
@@ -96,9 +146,43 @@ import echohackLogo from '../../assets/images/ecohackLogo.png'
 
 const isOpen = ref(false)
 const scrolled = ref(false)
+const activeSection = ref('home')
 
 const handleScroll = () => {
   scrolled.value = window.scrollY > 50
+  
+  // Detect which section is currently in view
+  const sections = ['home', 'whene', 'about', 'challenges', 'location']
+  const navHeight = 80
+  
+  for (const sectionId of sections) {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      const rect = element.getBoundingClientRect()
+      // Check if section is in viewport (with navbar offset consideration)
+      if (rect.top <= navHeight + 100 && rect.bottom >= navHeight + 100) {
+        activeSection.value = sectionId
+        break
+      }
+    }
+  }
+}
+
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId)
+  if (element) {
+    const navHeight = 80 // Height of the navbar
+    const elementPosition = element.offsetTop
+    const offsetPosition = elementPosition - navHeight
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    })
+    
+    // Close mobile menu after clicking
+    isOpen.value = false
+  }
 }
 
 onMounted(() => {

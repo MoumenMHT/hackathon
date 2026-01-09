@@ -16,7 +16,7 @@
       </p>
 
       <!-- Challenges Grid -->
-      <div class="grid md:grid-cols-3 gap-6 lg:gap-8 mb-12">
+      <div class="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
         <!-- Challenge 1: Sustainable Agriculture -->
         <div class="border-4 border-[#39B54A] rounded-3xl p-6 md:p-8 hover:shadow-2xl transition-shadow duration-300 bg-white flex flex-col">
           <div class="mb-4 md:mb-6">
@@ -82,37 +82,7 @@
           </button>
         </div>
 
-        <!-- Challenge 3: Smart Energy Management -->
-        <div class="border-4 border-[#39B54A] rounded-3xl p-6 md:p-8 hover:shadow-2xl transition-shadow duration-300 bg-white flex flex-col">
-          <div class="mb-4 md:mb-6">
-            <i class="fas fa-bolt text-[#39B54A] text-4xl md:text-5xl"></i>
-          </div>
-          
-          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-4">
-            Smart Energy Management for Electric Mobility
-          </h3>
-          
-          <p class="text-gray-600 text-sm md:text-base mb-4 flex-grow">
-            Power the future of electric vehicles with intelligent charging infrastructure, smart grid solutions, and optimized energy distribution for sustainable mobility.
-          </p>
-          
-          <div class="relative rounded-2xl overflow-hidden h-40 md:h-48 mb-4">
-            <img 
-              :src="SmartEnergyManagement"
-              alt="Smart Energy Management" 
-              class="absolute inset-x-0 bottom-0 w-full h-auto object-cover object-bottom"
-            />
-          </div>
-
-          <!-- See More Button -->
-          <button 
-            @click="openModal(challenges[2])"
-            class="w-full bg-[#39B54A] text-white font-semibold py-3 px-4 rounded-xl hover:bg-[#2d8c3a] transition transform hover:scale-105 flex items-center justify-center gap-2"
-          >
-            <i class="fas fa-info-circle"></i>
-            See More
-          </button>
-        </div>
+        
       </div>
     </div>
 
@@ -187,27 +157,6 @@ Your solutions could involve smart bins with fill-level sensors, AI-powered wast
           ],
           tags: ['Smart Bins', 'Route Optimization', 'Computer Vision', 'Circular Economy', 'IoT', 'Gamification', 'Community Engagement'],
           image: SmartWasteManagement
-        },
-        {
-          id: 3,
-          title: 'Smart Energy Management',
-          icon: 'fas fa-bolt',
-          description: 'Power the future of electric vehicles with intelligent charging infrastructure, smart grid solutions, and optimized energy distribution for sustainable mobility.',
-          detailedDescription: `Electric mobility is experiencing rapid expansion worldwide, driven by technological innovations in batteries, charging infrastructure, and renewable energy integration. However, the transition to clean transportation faces significant challenges: managing grid capacity, integrating renewable sources, and building adequate infrastructure.
-
-We're looking for solutions that enable intelligent energy management for electric vehicles, from smart charging systems that prevent grid overload to platforms that integrate solar and renewable energy into charging stations. Your innovations could range from AI algorithms for energy planning and optimization to mobile apps that help users find and manage charging.
-
-The goal is to create a more efficient, sustainable, and accessible electric mobility ecosystem that accelerates the adoption of clean transportation while ensuring grid stability and maximizing the use of renewable energy sources.`,
-          objectives: [
-            'Design smart EV charging systems that prevent grid overload',
-            'Integrate renewable energy sources into charging infrastructure',
-            'Build AI models for energy demand forecasting and optimization',
-            'Create platforms for charging station management and monitoring',
-            'Develop solutions for battery storage and vehicle-to-grid technology',
-            'Design cost-effective infrastructure models for emerging markets'
-          ],
-          tags: ['EV Charging', 'Smart Grid', 'Renewable Energy', 'AI/ML', 'IoT', 'Battery Storage', 'V2G', 'Mobile Apps'],
-          image: SmartEnergyManagement
         }
       ]
     }

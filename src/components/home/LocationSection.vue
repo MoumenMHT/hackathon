@@ -8,7 +8,7 @@
 
       <!-- Title -->
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-12">
-        Lieu de l'événement
+        Event's Location
       </h2>
 
       <!-- Map Container -->
@@ -49,14 +49,14 @@
               class="flex items-center gap-2 cursor-pointer hover:text-[#39B54A] transition-colors font-medium"
             >
               <i class="fas fa-route"></i>
-              Itinéraire
+              Itinerary
             </a>
             <span 
               @click="shareLocation"
               class="flex items-center gap-2 cursor-pointer hover:text-[#39B54A] transition-colors font-medium"
             >
               <i class="fas fa-share-nodes"></i>
-              Partager
+              Share
             </span>
           </div>
         </div>
@@ -70,7 +70,7 @@
           class="bg-[#39B54A] inline-flex items-center justify-center gap-2 text-white font-semibold py-3 px-6 md:px-8 rounded-xl shadow-lg hover:bg-[#2d8c3a] transition transform hover:scale-105 text-sm md:text-base"
         >
           <i class="fas fa-route text-base md:text-lg"></i>
-          Itinéraire
+          Itinerary
         </a>
         
         <button 
@@ -78,7 +78,7 @@
           class="border-2 border-[#39B54A] inline-flex items-center justify-center gap-2 bg-white text-[#39B54A] font-semibold py-3 px-6 md:px-8 rounded-xl shadow-lg hover:bg-gray-50 transition transform hover:scale-105 text-sm md:text-base"
         >
           <i class="fas fa-share-nodes text-base md:text-lg"></i>
-          Partager
+          Share
         </button>
       </div>
     </div>

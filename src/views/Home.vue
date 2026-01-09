@@ -4,21 +4,31 @@
     <Navbar />
     
     <!-- Main Content / Hero Section -->
-    <MainContent @open-registration="openRegistration" />
+    <div id="home">
+      <MainContent @open-registration="openRegistration" />
+    </div>
     
     <!-- Timer/Countdown Section -->
-    <Timer @open-registration="openRegistration" />
+    <div id="whene">
+      <Timer @open-registration="openRegistration" />
+    </div>
     
     <div class="h-20"></div>
 
     <!-- About Section -->
-    <AboutSection @open-registration="openRegistration" />
+    <div id="about">
+      <AboutSection @open-registration="openRegistration" />
+    </div>
     
     <!-- Challenges Section -->
-    <ChallengesSection @open-registration="openRegistration" />
+    <div id="challenges">
+      <ChallengesSection @open-registration="openRegistration" />
+    </div>
     
     <!-- Location Section -->
-    <LocationSection />
+    <div id="location">
+      <LocationSection />
+    </div>
     
     <!-- CTA Section -->
     <CTASection @open-registration="openRegistration" />
