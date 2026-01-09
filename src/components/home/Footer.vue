@@ -7,33 +7,28 @@
           <h3 class="text-[#39B54A] text-lg md:text-xl font-bold mb-4">Navigation</h3>
           <ul class="space-y-2 text-sm md:text-base">
             <li>
-              <a href="#" class="text-gray-700 hover:text-[#39B54A] transition">
+              <a @click.prevent="scrollToSection('home')" href="#home" class="text-gray-700 hover:text-[#39B54A] transition cursor-pointer">
                 • Home
               </a>
             </li>
             <li>
-              <a href="#" class="text-gray-700 hover:text-[#39B54A] transition">
+              <a @click.prevent="scrollToSection('about')" href="#about" class="text-gray-700 hover:text-[#39B54A] transition cursor-pointer">
                 • About
               </a>
             </li>
             <li>
-              <a href="#" class="text-gray-700 hover:text-[#39B54A] transition">
-                • Planning
+              <a @click.prevent="scrollToSection('challenges')" href="#challenges" class="text-gray-700 hover:text-[#39B54A] transition cursor-pointer">
+                • Challenges
               </a>
             </li>
             <li>
-              <a href="#" class="text-gray-700 hover:text-[#39B54A] transition">
-                • Inscription
+              <a @click.prevent="scrollToSection('whene')" href="#whene" class="text-gray-700 hover:text-[#39B54A] transition cursor-pointer">
+                • When
               </a>
             </li>
             <li>
-              <a href="#" class="text-gray-700 hover:text-[#39B54A] transition">
-                • Contact
-              </a>
-            </li>
-            <li>
-              <a href="#" class="text-gray-700 hover:text-[#39B54A] transition">
-                Sponsors & Partenaires
+              <a @click.prevent="scrollToSection('location')" href="#location" class="text-gray-700 hover:text-[#39B54A] transition cursor-pointer">
+                • Location
               </a>
             </li>
           </ul>
@@ -88,8 +83,18 @@
   </footer>
 </template>
 
-<script>
-export default {
-  name: 'Footer'
+<script setup>
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId)
+  if (element) {
+    const navHeight = 80 // Height of the navbar
+    const elementPosition = element.offsetTop
+    const offsetPosition = elementPosition - navHeight
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    })
+  }
 }
 </script>
