@@ -63,48 +63,52 @@
 
           <div>
             <label for="member2" class="block text-sm font-semibold text-gray-700 mb-2">
-              Team Member 2 Name
+              Team Member 2 Name <span class="text-red-500">*</span>
             </label>
             <input
               v-model="formData.member2"
               type="text"
               id="member2"
+              required
               class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#39B54A] focus:border-transparent transition-all"
               placeholder="Enter team member 2's name (optional)"
             />
           </div>
           <div>
             <label for="member3" class="block text-sm font-semibold text-gray-700 mb-2">
-              Team Member 3 Name
+              Team Member 3 Name <span class="text-red-500">*</span>
             </label>
             <input
               v-model="formData.member3"
               type="text"
               id="member3"
+              required
               class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#39B54A] focus:border-transparent transition-all"
               placeholder="Enter team member 3's name (optional)"
             />
           </div>
           <div>
             <label for="member4" class="block text-sm font-semibold text-gray-700 mb-2">
-              Team Member 4 Name
+              Team Member 4 Name <span class="text-red-500">*</span>
             </label>
             <input
               v-model="formData.member4"
               type="text"
               id="member4"
+              required
               class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#39B54A] focus:border-transparent transition-all"
               placeholder="Enter team member 4's name (optional)"
             />
           </div>
           <div>
             <label for="member5" class="block text-sm font-semibold text-gray-700 mb-2">
-              Team Member 5 Name
+              Team Member 5 Name <span class="text-red-500">*</span>
             </label>
             <input
               v-model="formData.member5"
               type="text"
               id="member5"
+              required
               class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#39B54A] focus:border-transparent transition-all"
               placeholder="Enter team member 5's name (optional)"
             />

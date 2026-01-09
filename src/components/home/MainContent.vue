@@ -111,14 +111,7 @@
               </span>
             </button>
 
-            <!-- Secondary Button -->
-            <button @click="handleLearnMore"
-                    class="group w-full sm:w-auto bg-gray-100 hover:bg-gray-200 backdrop-blur-md border border-gray-300 hover:border-gray-400 text-gray-900 font-semibold rounded-xl sm:rounded-2xl px-8 sm:px-10 md:px-12 lg:px-14 py-4 sm:py-5 md:py-6 transition-all duration-300 hover:scale-105 shadow-lg">
-              <span class="flex items-center justify-center gap-3 text-base sm:text-lg md:text-xl">
-                <i class="fas fa-info-circle group-hover:rotate-12 transition-transform duration-300"></i>
-                <span>Learn More</span>
-              </span>
-            </button>
+            
           </div>
 
           <!-- Social Proof -->
