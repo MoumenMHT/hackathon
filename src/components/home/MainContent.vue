@@ -74,9 +74,14 @@
               Join <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-600">Hundreds of Innovators</span>
               <br class="hidden sm:block" />
               Building Sustainable Solutions
+               <br class="hidden sm:block" />
+              28-29 January 
             </h1>
             <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Shape the future with cutting-edge technology. Network with industry leaders. Win amazing prizes.
+            </p>
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              28-29 January 2026 | CESI Algiers Campus
             </p>
           </div>
 
@@ -122,7 +127,7 @@
             </div>
             <div class="flex items-center gap-2 text-gray-600 text-xs sm:text-sm">
               <i class="fas fa-check-circle text-green-500"></i>
-              <span>Free Food & Drinks</span>
+              <span>Conferences</span>
             </div>
             <div class="flex items-center gap-2 text-gray-600 text-xs sm:text-sm">
               <i class="fas fa-check-circle text-green-500"></i>

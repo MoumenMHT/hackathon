@@ -36,7 +36,7 @@
             <img 
               :src="SustainableAgriculture" 
               alt="Sustainable Agriculture" 
-              class="absolute inset-x-0 bottom-0 w-full h-auto object-cover object-bottom"
+              class="w-full h-full object-cover"
             />
           </div>
 
@@ -68,7 +68,7 @@
             <img 
               :src="SmartWasteManagement"
               alt="Smart Waste Management" 
-              class="absolute inset-x-0 bottom-0 w-full h-auto object-cover object-bottom"
+              class="w-full h-full object-cover"
             />
           </div>
 

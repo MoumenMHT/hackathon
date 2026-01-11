@@ -2,6 +2,7 @@
 <template>
   <div style="background-color: #39B54A;" class="py-12 px-6 font-sans ">
     <div class="max-w-4xl mx-auto text-center">
+
       <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">Starting in</h2>
 
       <div class="flex gap-6 sm:gap-16 justify-center items-center px-4 sm:px-0">

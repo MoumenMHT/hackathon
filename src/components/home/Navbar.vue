@@ -42,46 +42,54 @@
 
           <!-- Desktop Navigation - starts at md (768px) -->
           <div class="hidden md:flex items-center space-x-4 lg:space-x-8">
-            <a @click.prevent="scrollToSection('home')" href="#home" :class="[
+            <a @click.prevent="navigateToSection('home')" href="#home" :class="[
               'px-4 lg:px-6 py-2 rounded-full font-medium transition-all duration-300 text-sm lg:text-base whitespace-nowrap cursor-pointer',
-              activeSection === 'home' 
+              activeSection === 'home' && route.path === '/' 
                 ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg hover:shadow-xl hover:scale-105 hover:from-green-600 hover:to-emerald-700' 
                 : 'text-gray-700 hover:text-[#76c248]'
             ]">
               Home
             </a>
-            <a @click.prevent="scrollToSection('whene')" href="#whene" :class="[
+            <a @click.prevent="navigateToSection('whene')" href="#whene" :class="[
               'px-4 lg:px-6 py-2 rounded-full font-medium transition-all duration-300 text-sm lg:text-base whitespace-nowrap cursor-pointer',
-              activeSection === 'whene' 
+              activeSection === 'whene' && route.path === '/' 
                 ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg hover:shadow-xl hover:scale-105 hover:from-green-600 hover:to-emerald-700' 
                 : 'text-gray-700 hover:text-[#76c248]'
             ]">
               When
             </a>
-            <a @click.prevent="scrollToSection('about')" href="#about" :class="[
+            <a @click.prevent="navigateToSection('about')" href="#about" :class="[
               'px-4 lg:px-6 py-2 rounded-full font-medium transition-all duration-300 text-sm lg:text-base whitespace-nowrap cursor-pointer',
-              activeSection === 'about' 
+              activeSection === 'about' && route.path === '/' 
                 ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg hover:shadow-xl hover:scale-105 hover:from-green-600 hover:to-emerald-700' 
                 : 'text-gray-700 hover:text-[#76c248]'
             ]">
               About
             </a>
-            <a @click.prevent="scrollToSection('challenges')" href="#challenges" :class="[
+            <a @click.prevent="navigateToSection('challenges')" href="#challenges" :class="[
               'px-4 lg:px-6 py-2 rounded-full font-medium transition-all duration-300 text-sm lg:text-base whitespace-nowrap cursor-pointer',
-              activeSection === 'challenges' 
+              activeSection === 'challenges' && route.path === '/' 
                 ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg hover:shadow-xl hover:scale-105 hover:from-green-600 hover:to-emerald-700' 
                 : 'text-gray-700 hover:text-[#76c248]'
             ]">
               Challenges
             </a>
-            <a @click.prevent="scrollToSection('location')" href="#location" :class="[
+            <a @click.prevent="navigateToSection('location')" href="#location" :class="[
               'px-4 lg:px-6 py-2 rounded-full font-medium transition-all duration-300 text-sm lg:text-base whitespace-nowrap cursor-pointer',
-              activeSection === 'location' 
+              activeSection === 'location' && route.path === '/' 
                 ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg hover:shadow-xl hover:scale-105 hover:from-green-600 hover:to-emerald-700' 
                 : 'text-gray-700 hover:text-[#76c248]'
             ]">
               Location
             </a>
+            <router-link to="/planing" :class="[
+              'px-4 lg:px-6 py-2 rounded-full font-medium transition-all duration-300 text-sm lg:text-base whitespace-nowrap cursor-pointer',
+              route.path === '/planing' 
+                ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg hover:shadow-xl hover:scale-105 hover:from-green-600 hover:to-emerald-700' 
+                : 'text-gray-700 hover:text-[#76c248]'
+            ]">
+              Planning
+            </router-link>
           </div>
 
         </div>
@@ -97,36 +105,42 @@
         >
           <div v-if="isOpen" class="md:hidden">
             <div class="px-2 pt-3 pb-4 space-y-1 bg-white/95 backdrop-blur-md border-t border-gray-100 rounded-b-lg">
-              <a @click.prevent="scrollToSection('home')" href="#home" :class="[
+              <a @click.prevent="navigateToSection('home')" href="#home" :class="[
                 'block px-4 py-3 rounded-md text-base font-medium cursor-pointer transition-all duration-300',
-                activeSection === 'home'
+                activeSection === 'home' && route.path === '/'
                   ? 'text-white bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700'
                   : 'text-gray-700 hover:text-[#76c248] hover:bg-gray-50'
               ]">Home</a>
-              <a @click.prevent="scrollToSection('whene')" href="#whene" :class="[
+              <a @click.prevent="navigateToSection('whene')" href="#whene" :class="[
                 'block px-4 py-3 rounded-md text-base font-medium cursor-pointer transition-all duration-300',
-                activeSection === 'whene'
+                activeSection === 'whene' && route.path === '/'
                   ? 'text-white bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700'
                   : 'text-gray-700 hover:text-[#76c248] hover:bg-gray-50'
               ]">When ?</a>
-              <a @click.prevent="scrollToSection('about')" href="#about" :class="[
+              <a @click.prevent="navigateToSection('about')" href="#about" :class="[
                 'block px-4 py-3 rounded-md text-base font-medium cursor-pointer transition-all duration-300',
-                activeSection === 'about'
+                activeSection === 'about' && route.path === '/'
                   ? 'text-white bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700'
                   : 'text-gray-700 hover:text-[#76c248] hover:bg-gray-50'
               ]">About</a>
-              <a @click.prevent="scrollToSection('challenges')" href="#challenges" :class="[
+              <a @click.prevent="navigateToSection('challenges')" href="#challenges" :class="[
                 'block px-4 py-3 rounded-md text-base font-medium cursor-pointer transition-all duration-300',
-                activeSection === 'challenges'
+                activeSection === 'challenges' && route.path === '/'
                   ? 'text-white bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700'
                   : 'text-gray-700 hover:text-[#76c248] hover:bg-gray-50'
               ]">Challenges</a>
-              <a @click.prevent="scrollToSection('location')" href="#location" :class="[
+              <a @click.prevent="navigateToSection('location')" href="#location" :class="[
                 'block px-4 py-3 rounded-md text-base font-medium cursor-pointer transition-all duration-300',
-                activeSection === 'location'
+                activeSection === 'location' && route.path === '/'
                   ? 'text-white bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700'
                   : 'text-gray-700 hover:text-[#76c248] hover:bg-gray-50'
               ]">Location</a>
+              <router-link to="/planing" @click="isOpen = false" :class="[
+                'block px-4 py-3 rounded-md text-base font-medium cursor-pointer transition-all duration-300',
+                route.path === '/planing'
+                  ? 'text-white bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700'
+                  : 'text-gray-700 hover:text-[#76c248] hover:bg-gray-50'
+              ]">Planning</router-link>
             </div>
           </div>
         </transition>
@@ -142,8 +156,11 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import echohackLogo from '../../assets/images/ecohackLogo.png'
 
+const route = useRoute()
+const router = useRouter()
 const isOpen = ref(false)
 const scrolled = ref(false)
 const activeSection = ref('home')
@@ -151,21 +168,40 @@ const activeSection = ref('home')
 const handleScroll = () => {
   scrolled.value = window.scrollY > 50
   
-  // Detect which section is currently in view
-  const sections = ['home', 'whene', 'about', 'challenges', 'location']
-  const navHeight = 80
-  
-  for (const sectionId of sections) {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      const rect = element.getBoundingClientRect()
-      // Check if section is in viewport (with navbar offset consideration)
-      if (rect.top <= navHeight + 100 && rect.bottom >= navHeight + 100) {
-        activeSection.value = sectionId
-        break
+  // Only track active section if on home page
+  if (route.path === '/') {
+    const sections = ['home', 'whene', 'about', 'challenges', 'location']
+    const navHeight = 80
+    
+    for (const sectionId of sections) {
+      const element = document.getElementById(sectionId)
+      if (element) {
+        const rect = element.getBoundingClientRect()
+        // Check if section is in viewport (with navbar offset consideration)
+        if (rect.top <= navHeight + 100 && rect.bottom >= navHeight + 100) {
+          activeSection.value = sectionId
+          break
+        }
       }
     }
   }
+}
+
+const navigateToSection = (sectionId) => {
+  // If we're not on home page, navigate to home first
+  if (route.path !== '/') {
+    router.push('/').then(() => {
+      // Wait for navigation and DOM update
+      setTimeout(() => {
+        scrollToSection(sectionId)
+      }, 100)
+    })
+  } else {
+    scrollToSection(sectionId)
+  }
+  
+  // Close mobile menu after clicking
+  isOpen.value = false
 }
 
 const scrollToSection = (sectionId) => {
@@ -179,9 +215,6 @@ const scrollToSection = (sectionId) => {
       top: offsetPosition,
       behavior: 'smooth'
     })
-    
-    // Close mobile menu after clicking
-    isOpen.value = false
   }
 }
 
