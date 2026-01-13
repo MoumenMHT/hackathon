@@ -189,6 +189,15 @@
               placeholder="Tell us about your team, skills, or any special requirements..."
             ></textarea>
           </div>
+          <div class="hidden-field" aria-hidden="true">
+            <input 
+              v-model="formData.website" 
+              type="text" 
+              name="website" 
+              tabindex="-1" 
+              autocomplete="off"
+            />
+          </div>
 
          
 
@@ -243,6 +252,7 @@ export default {
   },
   data() {
     return {
+      formOpenTime: 0,
       formData: {
         teamName: '',
         leaderName: '',
@@ -260,6 +270,11 @@ export default {
       showSuccess: false
     }
   },
+  watch: {
+  isOpen(val) {
+    if (val) this.formOpenTime = Date.now();
+  }
+},
   methods: {
     closeModal() {
       if (!this.isSubmitting) {
@@ -284,6 +299,17 @@ export default {
       this.showSuccess = false
     },
     async handleSubmit() {
+      // If the honeypot field is filled, it's a bot
+      if (this.formData.website) {
+        console.warn("Spam detected");
+        this.showSuccess = true; // Fake success to trick the bot
+        return;
+      }
+      const timeToSubmit = (Date.now() - this.formOpenTime) / 1000;
+      if (timeToSubmit < 4) {
+        console.warn("Submission too fast - likely a bot");
+        return; // Ignore submissions that are too quick
+      }
       this.isSubmitting = true
       
       try {
@@ -362,5 +388,9 @@ div::-webkit-scrollbar-thumb {
 
 div::-webkit-scrollbar-thumb:hover {
   background: #2d8f3a;
+}
+
+.hidden-field {
+  display: none !important;
 }
 </style>
