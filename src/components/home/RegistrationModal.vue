@@ -71,7 +71,7 @@
               id="member2"
               required
               class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#39B54A] focus:border-transparent transition-all"
-              placeholder="Enter team member 2's name (optional)"
+              placeholder="Enter team member 2's name "
             />
           </div>
           <div>
@@ -84,7 +84,7 @@
               id="member3"
               required
               class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#39B54A] focus:border-transparent transition-all"
-              placeholder="Enter team member 3's name (optional)"
+              placeholder="Enter team member 3's name "
             />
           </div>
           <div>
@@ -97,11 +97,12 @@
               id="member4"
               required
               class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#39B54A] focus:border-transparent transition-all"
-              placeholder="Enter team member 4's name (optional)"
+              placeholder="Enter team member 4's name "
             />
           </div>
           <div>
             <label for="member5" class="block text-sm font-semibold text-gray-700 mb-2">
+              
               Team Member 5 Name <span class="text-red-500">*</span>
             </label>
             <input
@@ -110,7 +111,7 @@
               id="member5"
               required
               class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#39B54A] focus:border-transparent transition-all"
-              placeholder="Enter team member 5's name (optional)"
+              placeholder="Enter team member 5's name "
             />
           </div>
           <!-- Email -->
@@ -160,8 +161,19 @@
               <option value="Sustainable Agriculture & Agroecology">Sustainable Agriculture & Agroecology</option>
               <option value="Smart Waste Management">Smart Waste Management</option>
             </select>
-          </div>
 
+            <transition name="fade">
+              <div 
+                v-if="formData.challenge" 
+                class="mt-3 p-3 bg-amber-50 border border-amber-200 rounded-lg flex items-start gap-3"
+              >
+                <i class="fas fa-exclamation-triangle text-amber-600 mt-1"></i>
+                <p class="text-xs md:text-sm text-amber-800">
+                  <strong>Note:</strong> While we try to accommodate your preference, participation in your chosen challenge is <strong>not guaranteed</strong> and depends on final team allocations.
+                </p>
+              </div>
+            </transition>
+          </div>
         
 
           <!-- Additional Notes -->

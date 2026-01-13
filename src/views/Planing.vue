@@ -5,54 +5,11 @@
       <!-- Pill Badge -->
       <div class="mb-8 inline-flex items-center rounded-full bg-gradient-to-r from-green-500 to-emerald-600 px-5 py-2.5 text-sm font-medium text-white shadow-lg shadow-green-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/30">
         <span class="mr-2.5 h-2 w-2 animate-pulse rounded-full bg-white"></span>
-        48 Hours of Innovation
+        Planning
       </div>
 
       
-      <!-- Main Heading -->
-      <h1 class="mb-6 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-7xl">
-        <span class="bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">48 Hours</span>
-        <span class="text-gray-900"> Journey</span>
-      </h1>
-
-      <!-- Subtitle -->
-      <p class="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-gray-600">
-        Discover the key moments of the EcoHack weekend. From ideation to final pitch,
-        every hour counts in this sustainable innovation marathon.
-      </p>
-
-      <!-- Date Range -->
-      <div class="mb-10 flex items-center justify-center gap-4">
-        <div class="flex items-center gap-2 rounded-xl bg-white px-5 py-3 shadow-md ring-1 ring-gray-100">
-          <svg class="h-5 w-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-          <span class="text-lg font-semibold text-gray-800">28-29 Jan</span>
-        </div>
-        <svg class="h-6 w-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-        </svg>
-        <div class="flex items-center gap-2 rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 px-5 py-3 text-white shadow-lg shadow-green-500/25">
-          <span class="text-3xl font-bold">48</span>
-          <span class="text-xs font-medium uppercase tracking-wider opacity-90">Hours</span>
-        </div>
-      </div>
-
-      <!-- Scroll Indicator -->
-      <div class="mb-10 flex flex-col items-center">
-        <div class="mb-3 flex h-14 w-8 items-start justify-center rounded-full border-2 border-green-300 bg-white p-2 shadow-sm">
-          <div class="h-3 w-1.5 animate-bounce rounded-full bg-gradient-to-b from-green-400 to-green-600"></div>
-        </div>
-        <span class="text-sm font-medium text-gray-500">Scroll to explore</span>
-      </div>
-
-      <!-- Time Management Label -->
-      <div class="inline-flex items-center gap-2 rounded-full bg-green-50 px-4 py-2 text-green-600 ring-1 ring-green-100">
-        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-label="Clock icon">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        <span class="font-semibold">Time Management</span>
-      </div>
+      
     </section>
 
     <!-- Timeline Section - SINGLE UNIFIED CONTAINER -->
@@ -468,61 +425,7 @@
       </div>
     </section>
 
-    <!-- EcoHack in Numbers Section -->
-    <section class="container mx-auto px-6 sm:px-8 lg:px-12 max-w-7xl py-20">
-      <div class="text-center">
-        <span class="mb-4 inline-block rounded-full bg-green-100 px-4 py-1.5 text-sm font-semibold text-green-700">Key Statistics</span>
-        <h2 class="mb-4 text-3xl font-extrabold text-gray-900 md:text-5xl">EcoHack in <span class="bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">Numbers</span></h2>
-        <p class="mx-auto mb-12 max-w-lg text-gray-600">Experience the scale and impact of our sustainable innovation marathon</p>
-      </div>
-
-      <div class="mx-auto grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-3">
-        <!-- 30 Hours of Innovation -->
-        <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 p-8 text-center text-white shadow-xl shadow-green-500/20 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-500/30" role="article" aria-label="30 Hours of Innovation">
-          <div class="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-white/10"></div>
-          <div class="absolute -bottom-6 -left-6 h-32 w-32 rounded-full bg-white/5"></div>
-          <div class="relative">
-            <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
-              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <div class="text-5xl font-extrabold">30</div>
-            <div class="mt-2 text-lg font-semibold opacity-90">Hours of Innovation</div>
-          </div>
-        </div>
-
-        <!-- 6 Shared Meals -->
-        <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 p-8 text-center text-white shadow-xl shadow-green-500/20 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-500/30" role="article" aria-label="6 Shared Meals">
-          <div class="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-white/10"></div>
-          <div class="absolute -bottom-6 -left-6 h-32 w-32 rounded-full bg-white/5"></div>
-          <div class="relative">
-            <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
-              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-            </div>
-            <div class="text-5xl font-extrabold">6</div>
-            <div class="mt-2 text-lg font-semibold opacity-90">Shared Meals</div>
-          </div>
-        </div>
-
-        <!-- 3 Winning Teams -->
-        <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 p-8 text-center text-white shadow-xl shadow-green-500/20 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-500/30" role="article" aria-label="3 Winning Teams">
-          <div class="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-white/10"></div>
-          <div class="absolute -bottom-6 -left-6 h-32 w-32 rounded-full bg-white/5"></div>
-          <div class="relative">
-            <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
-              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-              </svg>
-            </div>
-            <div class="text-5xl font-extrabold">3</div>
-            <div class="mt-2 text-lg font-semibold opacity-90">Winning Teams</div>
-          </div>
-        </div>
-      </div>
-    </section>
+   
   </div>
 </template>
 

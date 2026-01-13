@@ -74,6 +74,14 @@
             ]">
               Challenges
             </a>
+            <router-link to="/planing" :class="[
+              'px-4 lg:px-6 py-2 rounded-full font-medium transition-all duration-300 text-sm lg:text-base whitespace-nowrap cursor-pointer',
+              route.path === '/planing' 
+                ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg hover:shadow-xl hover:scale-105 hover:from-green-600 hover:to-emerald-700' 
+                : 'text-gray-700 hover:text-[#76c248]'
+            ]">
+              Planning
+            </router-link>  
             <a @click.prevent="navigateToSection('location')" href="#location" :class="[
               'px-4 lg:px-6 py-2 rounded-full font-medium transition-all duration-300 text-sm lg:text-base whitespace-nowrap cursor-pointer',
               activeSection === 'location' && route.path === '/' 
@@ -82,14 +90,7 @@
             ]">
               Location
             </a>
-            <router-link to="/planing" :class="[
-              'px-4 lg:px-6 py-2 rounded-full font-medium transition-all duration-300 text-sm lg:text-base whitespace-nowrap cursor-pointer',
-              route.path === '/planing' 
-                ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg hover:shadow-xl hover:scale-105 hover:from-green-600 hover:to-emerald-700' 
-                : 'text-gray-700 hover:text-[#76c248]'
-            ]">
-              Planning
-            </router-link>
+            
           </div>
 
         </div>

@@ -44,14 +44,15 @@
             </li>
             <li class="flex items-start gap-2 text-gray-700">
               <i class="fas fa-envelope text-[#39B54A] mt-1"></i>
-              <a href="mailto:contact@ecohack-cesi.dz" class="hover:text-[#39B54A] transition break-all">
-                contact@ecohack-cesi.dz
+              <a href="mailto:cesievents16@gmail.com" class="hover:text-[#39B54A] transition break-all">
+                cesievents16@gmail.com
+
               </a>
             </li>
             <li class="flex items-start gap-2 text-gray-700">
               <i class="fas fa-phone text-[#39B54A] mt-1"></i>
-              <a href="tel:0559922630" class="hover:text-[#39B54A] transition">
-                0559922630
+              <a href="tel:0779340010" class="hover:text-[#39B54A] transition">
+                0779340010
               </a>
             </li>
           </ul>

@@ -21,6 +21,11 @@
     <div id="challenges">
       <ChallengesSection @open-registration="openRegistration" />
     </div>
+
+    <!-- Planning Section -->
+    <div id="location">
+      <Planning />
+    </div>
     
     <!-- Location Section -->
     <div id="location">
@@ -43,6 +48,8 @@ import ChallengesSection from '../components/home/ChallengesSection.vue'
 import LocationSection from '../components/home/LocationSection.vue'
 import CTASection from '../components/home/CTASection.vue'
 import RegistrationModal from '../components/home/RegistrationModal.vue'
+import Planning from '../components/home/planning.vue'
+
 
 export default {
   name: 'Home',
@@ -53,7 +60,8 @@ export default {
     ChallengesSection,
     LocationSection,
     CTASection,
-    RegistrationModal
+    RegistrationModal,
+    Planning
   },
   data() {
     return {
