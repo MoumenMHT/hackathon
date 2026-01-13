@@ -8,6 +8,7 @@
         48 Hours of Innovation
       </div>
 
+      
       <!-- Main Heading -->
       <h1 class="mb-6 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-7xl">
         <span class="bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">48 Hours</span>
