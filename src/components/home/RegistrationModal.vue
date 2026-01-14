@@ -241,6 +241,7 @@
 
 <script>
 import { config } from '../../config'
+import { useReCaptcha } from 'vue-recaptcha-v3'
 
 export default {
   name: 'RegistrationModal',
@@ -275,6 +276,11 @@ export default {
     if (val) this.formOpenTime = Date.now();
   }
 },
+setup() {
+    // Initialize the reCAPTCHA composition API
+    const { executeRecaptcha, recaptchaLoaded } = useReCaptcha()
+    return { executeRecaptcha, recaptchaLoaded }
+  },
   methods: {
     closeModal() {
       if (!this.isSubmitting) {
@@ -299,73 +305,75 @@ export default {
       this.showSuccess = false
     },
     async handleSubmit() {
-      // If the honeypot field is filled, it's a bot
-      if (this.formData.website) {
-        console.warn("Spam detected");
-        this.showSuccess = true; // Fake success to trick the bot
-        return;
-      }
-      const timeToSubmit = (Date.now() - this.formOpenTime) / 1000;
-      if (timeToSubmit < 4) {
-        console.warn("Submission too fast - likely a bot");
-        return; // Ignore submissions that are too quick
-      }
-      this.isSubmitting = true
-      
-      try {
-        // Get Google Apps Script URL from config
-        const GOOGLE_SCRIPT_URL = config.googleSheetsUrl
-        
-        console.log('Sending to URL:', GOOGLE_SCRIPT_URL)
-        
-        // Prepare the data to send
-        const registrationData = {
-          teamName: this.formData.teamName,
-          leaderName: this.formData.leaderName,
-          member2: this.formData.member2 || '',
-          member3: this.formData.member3 || '',
-          member4: this.formData.member4 || '',
-          member5: this.formData.member5 || '',
-          email: this.formData.email,
-          phone: this.formData.phone,
-          challenge: this.formData.challenge,
-          notes: this.formData.notes,
-          timestamp: new Date().toISOString()
-        }
-        
-        console.log('Registration Data Sent:', registrationData)
-        
-        // Send data to Google Sheets
-        await fetch(GOOGLE_SCRIPT_URL, {
-          redirect: 'follow',
-          method: 'POST',
-          headers: {
-            'Content-Type': 'text/plain;charset=utf-8',
-          },
-          body: JSON.stringify(registrationData)
-        })
-        
-        console.log('Request sent successfully')
-        
-        this.isSubmitting = false
-        this.showSuccess = true
-        
-        // Close modal after 3 seconds
-        setTimeout(() => {
-          this.closeModal()
-        }, 3000)
-        
-      } catch (error) {
-        console.error('Error submitting registration:', error)
-        this.isSubmitting = false
-        // Still show success since no-cors doesn't allow error detection
-        this.showSuccess = true
-        
-        setTimeout(() => {
-          this.closeModal()
-        }, 3000)
-      }
+  // 1. Unified Guard Clause: Check for Honeypot AND Time-to-Submit
+  const timeToSubmit = (Date.now() - this.formOpenTime) / 1000;
+  
+  if (this.formData.website || timeToSubmit < 5) {
+    console.warn("Spam or bot-like behavior detected.");
+    // We show success to the user so bots don't know they've been caught
+    this.showSuccess = true; 
+    setTimeout(() => this.closeModal(), 3000);
+    return;
+  }
+
+  this.isSubmitting = true;
+
+  try {
+    // 2. reCAPTCHA Token Generation
+    // Must wait for the library to be ready and then execute for a token
+    await this.recaptchaLoaded();
+    const token = await this.executeRecaptcha('registration'); //
+
+    if (!token) {
+      throw new Error("Failed to acquire reCAPTCHA token.");
     }
+
+    const GOOGLE_SCRIPT_URL = config.googleSheetsUrl;
+
+    // 3. Prepare the data including the captchaToken
+    const registrationData = {
+      teamName: this.formData.teamName,
+      leaderName: this.formData.leaderName,
+      member2: this.formData.member2 || '',
+      member3: this.formData.member3 || '',
+      member4: this.formData.member4 || '',
+      member5: this.formData.member5 || '',
+      email: this.formData.email,
+      phone: this.formData.phone,
+      challenge: this.formData.challenge,
+      notes: this.formData.notes,
+      captchaToken: token, // Added for backend verification
+      timestamp: new Date().toISOString()
+    };
+
+    // 4. Send data to Google Sheets
+    await fetch(GOOGLE_SCRIPT_URL, {
+      redirect: 'follow',
+      method: 'POST',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8',
+      },
+      body: JSON.stringify(registrationData)
+    });
+
+    this.isSubmitting = false;
+    this.showSuccess = true;
+
+    setTimeout(() => {
+      this.closeModal();
+    }, 3000);
+
+  } catch (error) {
+    console.error('Error submitting registration:', error);
+    this.isSubmitting = false;
+    // Keeping your logic: show success to mask CORS/redirect issues from Apps Script
+    this.showSuccess = true;
+
+    setTimeout(() => {
+      this.closeModal();
+    }, 3000);
+  }
+}
   }
 }
 </script>
